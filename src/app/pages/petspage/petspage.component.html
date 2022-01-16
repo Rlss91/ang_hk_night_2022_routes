@@ -1,0 +1,10 @@
+<div class="list-group">
+  <a
+    routerLink="petsname"
+    [queryParams]="{ petname: petsname }"
+    class="list-group-item list-group-item-action"
+    *ngFor="let petsname of petsArr"
+    >{{ petsname }}</a
+  >
+</div>
+<router-outlet></router-outlet>

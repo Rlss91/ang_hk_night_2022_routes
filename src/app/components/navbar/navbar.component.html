@@ -1,0 +1,13 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/aboutus">About us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/pets" [queryParams]="{ name: 'fish' }"
+      >Pets</a
+    >
+  </li>
+</ul>
