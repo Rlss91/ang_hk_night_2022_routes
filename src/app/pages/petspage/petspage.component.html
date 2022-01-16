@@ -2,6 +2,7 @@
   <a
     routerLink="petsname"
     [queryParams]="{ petname: petsname }"
+    fragment="{{ petsname }}"
     class="list-group-item list-group-item-action"
     *ngFor="let petsname of petsArr"
     >{{ petsname }}</a
