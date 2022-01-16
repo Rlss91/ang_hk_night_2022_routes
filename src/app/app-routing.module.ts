@@ -5,6 +5,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AboutuspageComponent } from './pages/aboutuspage/aboutuspage.component';
 import { PetspageComponent } from './pages/petspage/petspage.component';
 import { PetsnamepageComponent } from './pages/petsnamepage/petsnamepage.component';
+import { ServersComponent } from './pages/servers/servers.component';
+import { ServernamesComponent } from './pages/servernames/servernames.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -13,6 +15,11 @@ const routes: Routes = [
     path: 'pets',
     component: PetspageComponent,
     children: [{ path: 'petsname', component: PetsnamepageComponent }],
+  },
+  {
+    path: 'servers',
+    component: ServersComponent,
+    children: [{ path: 'servernames', component: ServernamesComponent }],
   },
 ];
 

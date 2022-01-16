@@ -8,6 +8,8 @@ import { AboutuspageComponent } from './pages/aboutuspage/aboutuspage.component'
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PetspageComponent } from './pages/petspage/petspage.component';
 import { PetsnamepageComponent } from './pages/petsnamepage/petsnamepage.component';
+import { ServersComponent } from './pages/servers/servers.component';
+import { ServernamesComponent } from './pages/servernames/servernames.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PetsnamepageComponent } from './pages/petsnamepage/petsnamepage.compone
     AboutuspageComponent,
     NavbarComponent,
     PetspageComponent,
-    PetsnamepageComponent
+    PetsnamepageComponent,
+    ServersComponent,
+    ServernamesComponent
   ],
   imports: [
     BrowserModule,
