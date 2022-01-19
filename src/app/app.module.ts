@@ -10,6 +10,7 @@ import { PetspageComponent } from './pages/petspage/petspage.component';
 import { PetsnamepageComponent } from './pages/petsnamepage/petsnamepage.component';
 import { ServersComponent } from './pages/servers/servers.component';
 import { ServernamesComponent } from './pages/servernames/servernames.component';
+import { NotfoundpageComponent } from './pages/notfoundpage/notfoundpage.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ServernamesComponent } from './pages/servernames/servernames.component'
     PetspageComponent,
     PetsnamepageComponent,
     ServersComponent,
-    ServernamesComponent
+    ServernamesComponent,
+    NotfoundpageComponent
   ],
   imports: [
     BrowserModule,

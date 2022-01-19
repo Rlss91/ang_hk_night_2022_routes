@@ -8,6 +8,7 @@ import { PetsnamepageComponent } from './pages/petsnamepage/petsnamepage.compone
 import { ServersComponent } from './pages/servers/servers.component';
 import { ServernamesComponent } from './pages/servernames/servernames.component';
 import { AuthGuardGuard } from './services/auth-guard.guard';
+import { NotfoundpageComponent } from './pages/notfoundpage/notfoundpage.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -23,6 +24,14 @@ const routes: Routes = [
     canActivateChild: [AuthGuardGuard],
     component: ServersComponent,
     children: [{ path: 'servernames', component: ServernamesComponent }],
+  },
+  {
+    path: 'not-found',
+    component: NotfoundpageComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '/not-found',
   },
 ];
 
