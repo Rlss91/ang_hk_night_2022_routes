@@ -11,6 +11,7 @@ import { PetsnamepageComponent } from './pages/petsnamepage/petsnamepage.compone
 import { ServersComponent } from './pages/servers/servers.component';
 import { ServernamesComponent } from './pages/servernames/servernames.component';
 import { NotfoundpageComponent } from './pages/notfoundpage/notfoundpage.component';
+import { ParamexamplepageComponent } from './pages/paramexamplepage/paramexamplepage.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NotfoundpageComponent } from './pages/notfoundpage/notfoundpage.compone
     PetsnamepageComponent,
     ServersComponent,
     ServernamesComponent,
-    NotfoundpageComponent
+    NotfoundpageComponent,
+    ParamexamplepageComponent
   ],
   imports: [
     BrowserModule,
