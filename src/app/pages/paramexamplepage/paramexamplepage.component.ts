@@ -14,7 +14,7 @@ export class ParamexamplepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      this.paramStr = params['name'];
+      this.paramStr = `${params['year']}/${params['month']}/${params['day']}`;
     });
   }
 }

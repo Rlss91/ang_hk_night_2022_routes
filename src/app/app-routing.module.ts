@@ -27,7 +27,7 @@ const routes: Routes = [
     children: [{ path: 'servernames', component: ServernamesComponent }],
   },
   {
-    path: 'params/:name',
+    path: 'params/:year/:month/:day',
     component: ParamexamplepageComponent,
   },
   {
