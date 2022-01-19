@@ -1,16 +1,42 @@
-<ul class="nav">
+<ul class="nav nav-pills nav-fill">
   <li class="nav-item">
-    <a class="nav-link" routerLink="/">Home</a>
+    <a
+      class="nav-link"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/aboutus">About us</a>
+    <a class="nav-link" routerLink="/aboutus" routerLinkActive="active"
+      >About us</a
+    >
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/pets" [queryParams]="{ name: 'fish' }"
+    <a
+      class="nav-link"
+      routerLink="/pets"
+      [queryParams]="{ name: 'fish' }"
+      routerLinkActive="active"
       >Pets</a
     >
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="/servers">Servers</a>
+    <a
+      class="nav-link"
+      routerLink="/servers"
+      [queryParams]="{ server: 'test server' }"
+      routerLinkActive="active"
+      >Servers</a
+    >
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" (click)="handleLoginClick()" *ngIf="!loggedIn">
+      Login
+    </button>
+    <button class="nav-link" (click)="handleLogoutClick()" *ngIf="loggedIn">
+      Logout
+    </button>
   </li>
 </ul>

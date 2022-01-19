@@ -13,10 +13,15 @@ export class ServersComponent implements OnInit {
     this.serversArr = ['server1', 'server2', 'server3'];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.url.subscribe((data) => {
+      console.log('data', data);
+    });
+  }
 
   handleBtnClick(server: string): void {
     // console.log(server);
+    // this.router.navigate(['servernames']);
     this.router.navigate(['servernames'], {
       queryParams: { servername: server },
       relativeTo: this.route,
