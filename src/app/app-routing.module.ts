@@ -7,17 +7,20 @@ import { PetspageComponent } from './pages/petspage/petspage.component';
 import { PetsnamepageComponent } from './pages/petsnamepage/petsnamepage.component';
 import { ServersComponent } from './pages/servers/servers.component';
 import { ServernamesComponent } from './pages/servernames/servernames.component';
+import { AuthGuardGuard } from './services/auth-guard.guard';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'aboutus', component: AboutuspageComponent },
   {
     path: 'pets',
+    canActivate: [AuthGuardGuard],
     component: PetspageComponent,
     children: [{ path: 'petsname', component: PetsnamepageComponent }],
   },
   {
     path: 'servers',
+    canActivateChild: [AuthGuardGuard],
     component: ServersComponent,
     children: [{ path: 'servernames', component: ServernamesComponent }],
   },
