@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <form (ngSubmit)="handleSubmit()" #f="ngForm">
+      <div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class="form-control"
+            ngModel
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="form-control"
+            ngModel
+            email
+            required
+            #email="ngModel"
+          />
+          <span class="help-block" *ngIf="!email.valid && email.touched"
+            >Please enter a valid email</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="secret">Secret Question</label>
+          <select name="secret" id="secret" class="form-control">
+            <option value="father">What is the name of your father</option>
+            <option value="pet">What is the name of your first pet</option>
+            <option value="school">What is your school name</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="questionAnswer">Your answer</label>
+          <textarea
+            name="questionAnswer"
+            id="questionAnswer"
+            cols="50"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label>Your gender</label>
+          <div class="radio" *ngFor="let gender of genders">
+            <label
+              ><input type="radio" name="gender" ngModel [value]="gender" />{{
+                gender
+              }}</label
+            >
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">submit</button>
+      </div>
+    </form>
+  </div>
+</div>

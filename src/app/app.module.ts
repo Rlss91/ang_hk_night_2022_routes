@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { ServersComponent } from './pages/servers/servers.component';
 import { ServernamesComponent } from './pages/servernames/servernames.component';
 import { NotfoundpageComponent } from './pages/notfoundpage/notfoundpage.component';
 import { ParamexamplepageComponent } from './pages/paramexamplepage/paramexamplepage.component';
+import { FormTamplateDrivenComponent } from './pages/form-tamplate-driven/form-tamplate-driven.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,11 @@ import { ParamexamplepageComponent } from './pages/paramexamplepage/paramexample
     ServersComponent,
     ServernamesComponent,
     NotfoundpageComponent,
-    ParamexamplepageComponent
+    ParamexamplepageComponent,
+    FormTamplateDrivenComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

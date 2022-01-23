@@ -10,6 +10,7 @@ import { ServernamesComponent } from './pages/servernames/servernames.component'
 import { AuthGuardGuard } from './services/auth-guard.guard';
 import { NotfoundpageComponent } from './pages/notfoundpage/notfoundpage.component';
 import { ParamexamplepageComponent } from './pages/paramexamplepage/paramexamplepage.component';
+import { FormTamplateDrivenComponent } from './pages/form-tamplate-driven/form-tamplate-driven.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'params/:year/:month/:day',
     component: ParamexamplepageComponent,
+  },
+  {
+    path: 'template',
+    component: FormTamplateDrivenComponent,
   },
   {
     path: 'not-found',
