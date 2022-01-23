@@ -8,20 +8,43 @@ import { NgForm } from '@angular/forms';
 })
 export class FormTamplateDrivenComponent implements OnInit {
   @ViewChild('f', { static: false }) signupForm: NgForm;
-  genders = ['male', 'female'];
-  names = ['kenny', 'john', 'petter'];
+  genders: string[] = ['male', 'female'];
+  names: string[] = ['kenny', 'john', 'petter'];
   answer: string;
   defaultQuestion: string;
+  user = {
+    username: '',
+    email: '',
+    sercretQuestion: '',
+    answer: '',
+    gender: '',
+  };
+  submited: boolean;
+  responseFromServerPromise: Promise<boolean>;
 
   constructor() {
     this.answer = '';
     this.defaultQuestion = 'father';
+    this.submited = false;
   }
 
   ngOnInit(): void {}
 
   handleSubmit(): void {
     console.log(this.signupForm);
+    this.user.username = this.signupForm.value.userData.username;
+    this.user.email = this.signupForm.value.userData.email;
+    this.user.sercretQuestion = this.signupForm.value.secret;
+    this.user.answer = this.signupForm.value.questionAnswer;
+    this.user.gender = this.signupForm.value.gender;
+    console.log('user', this.user);
+    this.signupForm.reset();
+    this.responseFromServerPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(true);
+      }, 2000);
+    });
+    // this.submited = true;
   }
 
   sugUserName(): void {
