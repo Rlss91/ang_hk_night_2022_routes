@@ -9,11 +9,27 @@ import { NgForm } from '@angular/forms';
 export class FormTamplateDrivenComponent implements OnInit {
   @ViewChild('f', { static: false }) signupForm: NgForm;
   genders = ['male', 'female'];
-  constructor() {}
+  names = ['kenny', 'john', 'petter'];
+  answer: string;
+  defaultQuestion: string;
+
+  constructor() {
+    this.answer = '';
+    this.defaultQuestion = 'father';
+  }
 
   ngOnInit(): void {}
 
   handleSubmit(): void {
     console.log(this.signupForm);
+  }
+
+  sugUserName(): void {
+    let date = new Date();
+    this.signupForm.form.patchValue({
+      userData: {
+        username: this.names[date.getMilliseconds() % 3],
+      },
+    });
   }
 }
