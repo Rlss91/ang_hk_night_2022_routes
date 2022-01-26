@@ -15,6 +15,7 @@ import { NotfoundpageComponent } from './pages/notfoundpage/notfoundpage.compone
 import { ParamexamplepageComponent } from './pages/paramexamplepage/paramexamplepage.component';
 import { FormTamplateDrivenComponent } from './pages/form-tamplate-driven/form-tamplate-driven.component';
 import { ReplacePipePipe } from './pipes/replace-pipe.pipe';
+import { ReverseUpperPipe } from './pipes/reverse-upper.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ReplacePipePipe } from './pipes/replace-pipe.pipe';
     ParamexamplepageComponent,
     FormTamplateDrivenComponent,
     ReplacePipePipe,
+    ReverseUpperPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
