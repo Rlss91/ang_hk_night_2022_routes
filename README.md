@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## home work 1
+
+create auth service
+btn login, logout
+create authguard to protect the routes except home page, login page
+when user login take it to dashboard page
+dashboard page:
+list name page,
+you can look in the list for name that you will pass using queryParams
