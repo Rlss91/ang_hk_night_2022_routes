@@ -11,6 +11,8 @@ import { AuthGuardGuard } from './services/auth-guard.guard';
 import { NotfoundpageComponent } from './pages/notfoundpage/notfoundpage.component';
 import { ParamexamplepageComponent } from './pages/paramexamplepage/paramexamplepage.component';
 import { FormTamplateDrivenComponent } from './pages/form-tamplate-driven/form-tamplate-driven.component';
+import { HttpusersComponent } from './pages/httpusers/httpusers.component';
+import { TargilQueryParamsComponent } from './pages/targil-query-params/targil-query-params.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -28,12 +30,21 @@ const routes: Routes = [
     children: [{ path: 'servernames', component: ServernamesComponent }],
   },
   {
+    //http://localhost:4200/params/2022/02/02
     path: 'params/:year/:month/:day',
     component: ParamexamplepageComponent,
   },
   {
     path: 'template',
     component: FormTamplateDrivenComponent,
+  },
+  {
+    path: 'http',
+    component: HttpusersComponent,
+  },
+  {
+    path: 'targilqp',
+    component: TargilQueryParamsComponent,
   },
   {
     path: 'not-found',

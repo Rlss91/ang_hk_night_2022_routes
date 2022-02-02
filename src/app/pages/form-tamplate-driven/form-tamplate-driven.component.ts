@@ -31,7 +31,7 @@ export class FormTamplateDrivenComponent implements OnInit {
   ngOnInit(): void {}
 
   handleSubmit(): void {
-    console.log(this.signupForm);
+    console.log('this.signupForm', this.signupForm);
     this.user.username = this.signupForm.value.userData.username;
     this.user.email = this.signupForm.value.userData.email;
     this.user.sercretQuestion = this.signupForm.value.secret;

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { ParamexamplepageComponent } from './pages/paramexamplepage/paramexample
 import { FormTamplateDrivenComponent } from './pages/form-tamplate-driven/form-tamplate-driven.component';
 import { ReplacePipePipe } from './pipes/replace-pipe.pipe';
 import { ReverseUpperPipe } from './pipes/reverse-upper.pipe';
+import { HttpusersComponent } from './pages/httpusers/httpusers.component';
+import { TargilQueryParamsComponent } from './pages/targil-query-params/targil-query-params.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +35,10 @@ import { ReverseUpperPipe } from './pipes/reverse-upper.pipe';
     FormTamplateDrivenComponent,
     ReplacePipePipe,
     ReverseUpperPipe,
+    HttpusersComponent,
+    TargilQueryParamsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
