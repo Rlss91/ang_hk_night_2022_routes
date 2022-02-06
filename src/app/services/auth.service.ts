@@ -7,9 +7,11 @@ import { Subject } from 'rxjs';
 export class AuthService {
   loggedInSubject: Subject<boolean>;
   loggedIn: boolean;
+  token: string;
   constructor() {
     this.loggedInSubject = new Subject<boolean>();
     this.loggedIn = false;
+    this.token = 'this is our token';
   }
 
   isAuthenticated(): Promise<boolean> {
